@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>自定义节点 | Logic Flow</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Logic Flow desc">
+    
+    <link rel="preload" href="/assets/css/0.styles.fbf5df4c.css" as="style"><link rel="preload" href="/assets/js/app.4e0df529.js" as="script"><link rel="preload" href="/assets/js/2.ce0f30c1.js" as="script"><link rel="preload" href="/assets/js/8.a1a17169.js" as="script"><link rel="preload" href="/assets/js/3.6f1b5052.js" as="script"><link rel="prefetch" href="/assets/js/10.83fc47b7.js"><link rel="prefetch" href="/assets/js/11.f62bf07b.js"><link rel="prefetch" href="/assets/js/12.15857f84.js"><link rel="prefetch" href="/assets/js/13.eb0c3dce.js"><link rel="prefetch" href="/assets/js/14.e30a5322.js"><link rel="prefetch" href="/assets/js/15.c8731950.js"><link rel="prefetch" href="/assets/js/16.5aaeab27.js"><link rel="prefetch" href="/assets/js/17.5bb66dc3.js"><link rel="prefetch" href="/assets/js/18.f63fb344.js"><link rel="prefetch" href="/assets/js/19.f6313429.js"><link rel="prefetch" href="/assets/js/20.9e9e9803.js"><link rel="prefetch" href="/assets/js/21.a5ebfee0.js"><link rel="prefetch" href="/assets/js/22.16daa81c.js"><link rel="prefetch" href="/assets/js/23.30c3748e.js"><link rel="prefetch" href="/assets/js/24.2fc8642b.js"><link rel="prefetch" href="/assets/js/25.3e360b4b.js"><link rel="prefetch" href="/assets/js/26.3833905b.js"><link rel="prefetch" href="/assets/js/27.46abf521.js"><link rel="prefetch" href="/assets/js/28.55e9788f.js"><link rel="prefetch" href="/assets/js/29.7dbc6778.js"><link rel="prefetch" href="/assets/js/30.aa415e9f.js"><link rel="prefetch" href="/assets/js/31.d0cb6496.js"><link rel="prefetch" href="/assets/js/32.4566ef10.js"><link rel="prefetch" href="/assets/js/33.386d7640.js"><link rel="prefetch" href="/assets/js/34.b81ae223.js"><link rel="prefetch" href="/assets/js/35.6d51a13e.js"><link rel="prefetch" href="/assets/js/36.16508b1f.js"><link rel="prefetch" href="/assets/js/4.69af47a6.js"><link rel="prefetch" href="/assets/js/5.0b1ff015.js"><link rel="prefetch" href="/assets/js/6.52658573.js"><link rel="prefetch" href="/assets/js/7.637023d3.js"><link rel="prefetch" href="/assets/js/9.138f1b1a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fbf5df4c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Logic Flow" class="logo"> <span class="site-name can-hide">Logic Flow</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/start.html" class="nav-link">
+  教程
+</a></div><div class="nav-item"><a href="/api/logicFlowApi.html" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/usage/bpmn.html" class="nav-link">
+  示例
+</a></div><div class="nav-item"><a href="/article/article01.html" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="https://github.com/didi/LogicFlow" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/start.html" class="nav-link">
+  教程
+</a></div><div class="nav-item"><a href="/api/logicFlowApi.html" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/usage/bpmn.html" class="nav-link">
+  示例
+</a></div><div class="nav-item"><a href="/article/article01.html" class="nav-link">
+  文章
+</a></div><div class="nav-item"><a href="https://github.com/didi/LogicFlow" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/guide/start.html" class="sidebar-link">快速上手</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础教程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/basic/logic-flow.html" class="sidebar-link">LogicFlow</a></li><li><a href="/guide/basic/node.html" class="sidebar-link">节点 Node</a></li><li><a href="/guide/basic/edge.html" class="sidebar-link">边 Edge</a></li><li><a href="/guide/basic/grid.html" class="sidebar-link">网格 Grid</a></li><li><a href="/guide/basic/background.html" class="sidebar-link">背景 Background</a></li><li><a href="/guide/basic/dnd.html" class="sidebar-link">拖拽 Dnd</a></li><li><a href="/guide/basic/keyboard.html" class="sidebar-link">键盘快捷键 Keyboard</a></li><li><a href="/guide/basic/redoundo.html" class="sidebar-link">撤销/重做 Undo/Redo</a></li><li><a href="/guide/basic/snapline.html" class="sidebar-link">对齐线 Snapline</a></li><li><a href="/guide/basic/silent-mode.html" class="sidebar-link">静默模式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>进阶指引</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/advance/theme.html" class="sidebar-link">主题 Theme 样式</a></li><li><a href="/guide/advance/event.html" class="sidebar-link">事件 Event</a></li><li><a href="/guide/advance/customNode.html" aria-current="page" class="active sidebar-link">自定义节点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/advance/customNode.html#原理" class="sidebar-link">原理</a></li><li class="sidebar-sub-header"><a href="/guide/advance/customNode.html#注册自定义节点" class="sidebar-link">注册自定义节点</a></li><li class="sidebar-sub-header"><a href="/guide/advance/customNode.html#自定义节点的类型" class="sidebar-link">自定义节点的类型</a></li><li class="sidebar-sub-header"><a href="/guide/advance/customNode.html#自定义节点的-view" class="sidebar-link">自定义节点的 View</a></li><li class="sidebar-sub-header"><a href="/guide/advance/customNode.html#自定义节点的-model" class="sidebar-link">自定义节点的 Model</a></li><li class="sidebar-sub-header"><a href="/guide/advance/customNode.html#extendkey" class="sidebar-link">extendKey</a></li></ul></li><li><a href="/guide/advance/customEdge.html" class="sidebar-link">自定义连线</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>拓展</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/extension/extension-intro.html" class="sidebar-link">简介</a></li><li><a href="/guide/extension/extension-components.html" class="sidebar-link">组件</a></li><li><a href="/guide/extension/bpmn-element.html" class="sidebar-link">BPMN 元素</a></li><li><a href="/guide/extension/snapshot.html" class="sidebar-link">导出图片</a></li><li><a href="/guide/extension/adapter.html" class="sidebar-link">数据转换 Adapter</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="自定义节点"><a href="#自定义节点" class="header-anchor">#</a> 自定义节点</h1> <blockquote><p>Logic Flow 的元素是基于 SVG 实现的，如果你对 SVG 的相关知识还不太熟悉，那么推荐你先了解一下 <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG" target="_blank" rel="noopener noreferrer">SVG<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 的基础内容。</p></blockquote> <h2 id="原理"><a href="#原理" class="header-anchor">#</a> 原理</h2> <h3 id="基于继承的自定义节点"><a href="#基于继承的自定义节点" class="header-anchor">#</a> 基于继承的自定义节点</h3> <p>Logic Flow 对外暴露了基础节点<code>BaseNode</code>和5个代表简单类型的节点<code>RectNode</code>、<code>CircleNode</code>、<code>PolygonNode</code>、<code>EllipseNode</code>、<code>DiamondNode</code>。</p> <p><img src="/assets/img/custom-node.befafe5a.png" alt="节点继承原理"></p> <p>由上图可以看到，Logic Flow 提供的<code>RectNode</code>、<code>CircleNode</code>、<code>PolygonNode</code>都是继承自内部的<code>BaseNode</code>。因此，用户的<code>CustomNode</code>可以通过继承简单类型节点来实现，也可以直接继承<code>BaseNode</code>。</p> <h3 id="mvvm"><a href="#mvvm" class="header-anchor">#</a> MVVM</h3> <p>Logic Flow 内部是基于<code>MVVM</code>模式进行开发的，分别使用<code>preact</code>和<code>mobx</code>来处理 view 和 model，所以当我们自定义节点的时候，需要为这个节点定义<code>view</code>和<code>model</code>。</p> <h2 id="注册自定义节点"><a href="#注册自定义节点" class="header-anchor">#</a> 注册自定义节点</h2> <p>我们可以在创建<code>LogicFlow</code>实例之后，<code>render</code>之前，使用<a href="/api/logicFlowApi.html#register"><code>register</code>方法</a>来注册自定义节点。</p> <p><code>register</code>的第一个参数告诉 Logic Flow 自定义节点的类型，第二个参数可以为自定义节点定义<code>view</code>和<code>model</code>。<code>register</code>的第二个参数是一个回调函数，它的参数包含了 Logic Flow 内部所有节点的<code>view</code>和<code>model</code>，因此，我们可以通过<strong>继承</strong>这些内部的<code>view</code>和<code>model</code>来实现自定义节点的<code>view</code>和<code>model</code>，下文详细介绍了注册自定义节点的细节。</p> <h2 id="自定义节点的类型"><a href="#自定义节点的类型" class="header-anchor">#</a> 自定义节点的类型</h2> <p>如果我们要注册一个<code>type</code>为<code>startEvent</code>的自定义节点，这个节点形状是一个圆形，那么可以通过继承内置的<code>Circle</code>节点（实际是继承<code>Circle</code>的<code>view</code>和<code>model</code>）来快速实现，例如：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 注册自定义节点</span>
+lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'startEvent'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> CircleNode<span class="token punctuation">,</span> CircleNodeModel <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token comment">// 自定义节点的 view，CircleNode 是 Circle 的 view</span>
+  <span class="token keyword">class</span> <span class="token class-name">StartEventView</span> <span class="token keyword">extends</span> <span class="token class-name">CircleNode</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token comment">// 自定义节点的 model，CircleNodeModel 是 Circle 的 model</span>
+  <span class="token keyword">class</span> <span class="token class-name">StartEventModel</span> <span class="token keyword">extends</span> <span class="token class-name">CircleNodeModel</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> StartEventView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> StartEventModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 使用自定义节点</span>
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'startEvent'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'开始'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>访问 <a href="/api/logicFlowApi.html#register">API</a> 来查看<code>register</code>提供的<code>view</code>和<code>model</code>全集。</p> <h2 id="自定义节点的-view"><a href="#自定义节点的-view" class="header-anchor">#</a> 自定义节点的 View</h2> <p>节点在<code>view</code>中维护了自身的<code>VNode</code>，Logic Flow 渲染节点时会实例化<code>view</code>，并主动调用<code>view</code>中的<code>getShape</code>方法来确定<code>VNode</code>该如何渲染，通过<strong>复写</strong>该方法就可以实现自定义节点的<code>view</code>。</p> <h3 id="getshape"><a href="#getshape" class="header-anchor">#</a> getShape</h3> <p><code>getShape</code>方法可以返回任意 SVG 能识别的标签，这个返回的元素就是自定义节点的<code>VNode</code>，目前需要使用 Logic Flow 提供的 <code>h</code> 方法来创建 SVG 元素。</p> <p>以自定义一个正方形（square）节点为例，直接通过继承<code>RectNode</code>来实现，我需要在<code>getShape</code>方法中返回一个 SVG 元素。</p> <div class="language-js extra-class"><pre class="language-js"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">RegisterParam</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// h 方法由 Logic Flow 提供</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token comment">// getShape 的返回值是一个通过 h 方法创建的 svg 元素</span>
+    <span class="token function">getShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 使用 h 方法创建一个矩形</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">&quot;rect&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token comment">// some attributies</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> SquareView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> RectNodeModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 配置节点</span>
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      type<span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'正方形'</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在上面的代码中，<code>getShape</code>方法返回了一个没有任何属性的 rect 标签，Logic Flow 拿到这个返回值后会直接在<code>graph</code>中进行渲染。（此时节点还不能正常显示，<code>view</code>仍然缺少了<code>model</code>所提供的数据）</p> <p>可以看出，<code>view</code>只专注于节点应该如何渲染，而渲染时所需要的据全部源自于<code>model</code>，Logic Flow 在<code>view</code>中提供了两个方法可以获取这些数据。</p> <ul><li><a href="/guide/advance/customNode.html#getshapestyle">getShapeStyle</a></li> <li><a href="/guide/advance/customNode.html#getattributes">getAttributes</a></li></ul> <h3 id="getshapestyle"><a href="#getshapestyle" class="header-anchor">#</a> getShapeStyle</h3> <p><code>getShapeStyle</code>方法返回了节点在渲染时所需要的部分样式属性，这些属性源自节点所对应的<code>model</code>。</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 为自定义节点复写 getShapeStyle</span>
+<span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>style<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>继续看前文中的正方形节点示例，现在我们通过<code>getShapeStyle</code>获取到<code>model</code>中的<a href="/api/nodeApi.html#样式属性">样式属性</a>，并将其赋值给 rect 标签上。</p> <div class="language-js extra-class"><pre class="language-js"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">RegisterParam</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取 model 中的样式属性</span>
+    <span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>style<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">&quot;rect&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>style
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> SquareView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> RectNodeModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 通过 setTheme 将 model 中的 width 和 height 设为 100</span>
+lf<span class="token punctuation">.</span><span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  rect<span class="token operator">:</span> <span class="token punctuation">{</span>
+    width<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+    height<span class="token operator">:</span> <span class="token number">100</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      type<span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'正方形'</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在上面的代码中，我们通过<code>getShapeStyle</code>方法获取到了<code>model</code>所维护的样式属性，并将其传递给 rect 标签。</p> <blockquote><p>我们不推荐在<code>view</code>中直接修改节点的各类属性，因为在 LF 中，锚点和外边框的渲染数据都基于<code>model</code>的数据，在<code>view</code>中设置的数据并不能影响到锚点和外边框，进而导致渲染出现问题，所以直接在<code>model</code>中修改属性是正确的姿势。此外通过<code>lf.setTheme</code>方法设置的样式是作用于全局的，对于自定义节点，我们推荐直接修改<code>model</code>中的样式属性。在下文，我们会学习如何在<a href="/guide/advance/customNode.html#自定义节点的-model">model</a>中设置各种属性。</p></blockquote> <p>现在节点的基本样式已经可以正常渲染了，但是在 Logic Flow 中，一个节点的基本功能（例：渲染位置）还受其自身的<a href="/api/nodeApi.html#通用属性">数据属性</a>所影响，所以我们还要根据数据属性为节点标签设置必要的属性。</p> <h3 id="getattributes"><a href="#getattributes" class="header-anchor">#</a> getAttributes</h3> <p>除了样式属性以外，Logic Flow 还为我们提供了节点的<a href="/api/nodeApi.html#通用属性">数据属性</a>，我们可以通过<code>getAttributes</code>进行获取。</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 为自定义节点复写 getAttributes</span>
+<span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> attributes <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>attributes<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>仍然以自定义的正方形节点为例，现在我们要把 rect 所需要的属性补充完整。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>style<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 获取 model 中的数据属性</span>
+    <span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> attributes <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>attributes<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> style<span class="token punctuation">;</span> 
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// rect 标签的 x，y 对应的是图形的左上角</span>
+      <span class="token comment">// 所以我们要将矩形的中心移动到 x，y</span>
+      <span class="token keyword">const</span> position <span class="token operator">=</span> <span class="token punctuation">{</span>
+        x<span class="token operator">:</span> x <span class="token operator">-</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        y<span class="token operator">:</span> y <span class="token operator">-</span> height <span class="token operator">/</span><span class="token number">2</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">&quot;rect&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>style<span class="token punctuation">,</span>
+        <span class="token operator">...</span>position
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> SquareView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> RectNodeModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+lf<span class="token punctuation">.</span><span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  rect<span class="token operator">:</span> <span class="token punctuation">{</span>
+    width<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+    height<span class="token operator">:</span> <span class="token number">100</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'正方形'</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在上面的代码中，我们通过<code>getAttributes</code>方法获取到了节点<code>model</code>中的数据属性，并将 rect 元素与数据属性中的<code>(x, y)</code>对齐，到此为止，一个自定义正方形节点已经可以正常显示并使用了。🎉</p> <h3 id="自定义属性-properties"><a href="#自定义属性-properties" class="header-anchor">#</a> 自定义属性 <code>properties</code></h3> <p>在业务中，自定义节点常常会有许多附加的特性，例如根据不同的业务属性展现出不同的样式，对于这种需求，我们可以在配置节点的<a href="/api/nodeApi.html#通用属性">数据属性</a>时通过<code>properties</code>进行设置。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>style<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> attributes <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>attributes<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> style<span class="token punctuation">;</span> 
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> properties <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> position <span class="token operator">=</span> <span class="token punctuation">{</span>
+        x<span class="token operator">:</span> x <span class="token operator">-</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        y<span class="token operator">:</span> y <span class="token operator">-</span> height <span class="token operator">/</span><span class="token number">2</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 读取 properties 中的附加属性</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> executed <span class="token punctuation">}</span> <span class="token operator">=</span> properties<span class="token punctuation">;</span>
+      <span class="token comment">// 如果节点已经执行，则边框显示为绿色</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>executed<span class="token punctuation">)</span> style<span class="token punctuation">.</span>stroke <span class="token operator">=</span> <span class="token string">'#2da54e'</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">&quot;rect&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>style<span class="token punctuation">,</span>
+        <span class="token operator">...</span>position
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> SquareView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> RectNodeModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+lf<span class="token punctuation">.</span><span class="token function">setTheme</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  rect<span class="token operator">:</span> <span class="token punctuation">{</span>
+    width<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+    height<span class="token operator">:</span> <span class="token number">100</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 配置节点时，在 properties 中设置需要的附加属性</span>
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'正方形'</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span>
+        executed<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>properties</code>可以放任何值，Logic Flow 内部不会使用它，当接入方需要存放一些和节点相绑定的数据时，可以将其加入到<code>properties</code>中。</p> <blockquote><p>Logic Flow 自定义节点的灵活性就在于<code>getAttributes</code>方法和<code>properties</code>属性的使用，这两者的结合可以实现大部分业务对于节点的需求。</p></blockquote> <h2 id="自定义节点的-model"><a href="#自定义节点的-model" class="header-anchor">#</a> 自定义节点的 Model</h2> <p>节点在<code>model</code>中维护了以下内容：</p> <ul><li>节点的<a href="/api/nodeApi.html#通用属性">数据属性</a>和<a href="/api/nodeApi.html#样式属性">样式属性</a></li> <li>在连线时，节点作为<code>source</code>或<code>target</code>的<strong>连线规则</strong></li> <li>简单节点的<a href="/api/nodeApi.html#节点属性">节点属性</a></li></ul> <h3 id="数据属性和样式属性"><a href="#数据属性和样式属性" class="header-anchor">#</a> 数据属性和样式属性</h3> <p>在前文中我们已经知道，为自定义节点的<code>view</code>定义<code>VNode</code>时，可以通过<code>getShapeStyle</code>和<code>getAttributes</code>方法来获取节点渲染时所需要的数据，这些数据全部源自于节点的<code>model</code>，我们可以在<code>model</code>中修改这些属性来实现自定义节点的部分效果。</p> <h4 id="自定义节点的样式属性"><a href="#自定义节点的样式属性" class="header-anchor">#</a> 自定义节点的样式属性</h4> <p>以正方形的<code>width</code>和<code>height</code>为例，在之前的示例中，我们通过<code>lf.setTheme</code>方法设置矩形的全局样式，现在我们只对<code>square</code>节点的样式进行设置。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token function">getShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> style<span class="token punctuation">;</span> 
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> position <span class="token operator">=</span> <span class="token punctuation">{</span>
+        x<span class="token operator">:</span> x <span class="token operator">-</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        y<span class="token operator">:</span> y <span class="token operator">-</span> height <span class="token operator">/</span><span class="token number">2</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">&quot;rect&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>style<span class="token punctuation">,</span>
+        <span class="token operator">...</span>position
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 自定义节点的 model</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareModel</span> <span class="token keyword">extends</span> <span class="token class-name">RectNodeModel</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> graphModel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> graphModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> SquareView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> SquareModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 配置节点时，在 properties 中设置需要的附加属性</span>
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'正方形'</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在上面的代码中，我们直接在<code>model</code>的构造函数里面设置了<code>width</code>和<code>height</code>，现在节点<code>view</code>通过<code>getShapeStyle</code>获取的样式也就随之发生了变更。同时可以看到，在自定义<code>model</code>时，我们需要提供一个构造函数，并在内部调用<code>super</code>方法进行初始化，Logic Flow 会为构造函数提供两个参数。</p> <ul><li><code>data</code> - 配置节点时的<a href="/api/nodeApi.html#通用属性">数据属性</a></li> <li><code>graphModel</code> - LF 内部数据（继承自<code>BaseNodeModel</code>时不存在该参数；不建议做任何改动，后续版本会删掉。）</li></ul> <h4 id="自定义节点的数据属性"><a href="#自定义节点的数据属性" class="header-anchor">#</a> 自定义节点的数据属性</h4> <p>在<a href="/api/nodeApi.html#通用属性">数据属性</a>中，我们可以设置节点的起始位置、文本内容及其位置、自定义属性等，这些数据最终都会被传入<code>model</code>进行初始化，所以我们同样可以在<code>model</code>中对这些值进行重新定义。</p> <p>以正方形节点为例，现在我们想要自定义节点的文本位置。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'square'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel<span class="token punctuation">,</span> h <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token function">getShape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getShapeStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> style<span class="token punctuation">;</span> 
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> position <span class="token operator">=</span> <span class="token punctuation">{</span>
+        x<span class="token operator">:</span> x <span class="token operator">-</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span>
+        y<span class="token operator">:</span> y <span class="token operator">-</span> height <span class="token operator">/</span><span class="token number">2</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">&quot;rect&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>style<span class="token punctuation">,</span>
+        <span class="token operator">...</span>position
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 自定义节点的 model</span>
+  <span class="token keyword">class</span> <span class="token class-name">SquareModel</span> <span class="token keyword">extends</span> <span class="token class-name">RectNodeModel</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> graphModel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> graphModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+      <span class="token comment">// 设置节点的文本位置</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>text <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>text<span class="token punctuation">,</span> <span class="token comment">// 必需。super() 已经为 text 设置了部分内部数据</span>
+        y<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>text<span class="token punctuation">.</span>y <span class="token operator">+</span> <span class="token number">70</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> SquareView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> SquareModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 配置节点时，在 properties 中设置需要的附加属性</span>
+lf<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+      <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">,</span>
+      x<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      y<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">'正方形'</span><span class="token punctuation">,</span>
+      properties<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="简单节点的节点属性"><a href="#简单节点的节点属性" class="header-anchor">#</a> 简单节点的节点属性</h3> <p>不同形状的简单节点所对应的 SVG 标签不同，其所需要的标签属性也略有不同，查看<a href="/api/nodeApi.html#节点属性">节点API</a>以获取更过信息。</p> <p>例如我们需要实现一个三角形的节点。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'triangle'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> PolygonNode<span class="token punctuation">,</span> PolygonNodeModel <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">TriangleModel</span> <span class="token keyword">extends</span> <span class="token class-name">PolygonNodeModel</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> graphModel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> graphModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 多边形的节点属性 points</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>points <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> PolygonNode<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> TriangleModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><iframe width="100%" height="200" src="" data-v-e8c9530e></iframe></p> <blockquote><p>默认情况下，Logic Flow 会在每个顶点上生成一个可以连接的锚点。</p></blockquote> <h3 id="连线规则"><a href="#连线规则" class="header-anchor">#</a> 连线规则</h3> <p>在某些时候，我们可能需要控制连线的连接方式，比如开始节点不能被其它节点连接、结束节点不能连接其他节点、用户节点后面必须是判断节点等。Logic Flow 在<code>model</code>中提供了以下两个方法来实现节点的连线规则。</p> <ul><li><a href="/guide/advance/customNode.html#getconnectedsourcerules">getConnectedSourceRules</a></li> <li><a href="/guide/advance/customNode.html#getconnectedtargetrules">getConnectedTargetRules</a></li></ul> <h4 id="getconnectedsourcerules"><a href="#getconnectedsourcerules" class="header-anchor">#</a> getConnectedSourceRules</h4> <p>通过该方法能够获取当前节点作为连线开始点（source）的校验规则。它的的返回值是一个包含了多项校验规则的数组，每项规则都是一个对象，我们需要为其设置<code>messgage</code>和<code>validate</code>属性。</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token function">getConnectedSourceRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 在所继承节点的连线规则的基础上添加新的规则</span>
+  <span class="token keyword">const</span> rules <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getConnectedSourceRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> rule <span class="token operator">=</span> <span class="token punctuation">{</span>
+    message<span class="token operator">:</span> <span class="token string">'不满足连线的校验规则'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">validate</span><span class="token operator">:</span> <span class="token punctuation">(</span>source<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 校验规则</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  rules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> rules<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在上面的代码中，<code>getConnectedSourceRules</code>方法在所继承节点的校验规则的基础上新增了一项 rule，rule 的<code>message</code>属性是当不满足校验规则时所抛出的错误信息，<code>validate</code>则是传入规则检验的回调函数。</p> <p><code>validate</code>方法有两个参数，分别为包含了自身数据属性的连线起始节点（source）和连线目标节点（target）。我们可以根据节点的情况，来返回<code>true or false</code>. <code>true</code>表示通过校验。</p> <p>例如我们想实现一个用户节点（UserTask），在连线时它的下一节点只能是网关节点，那么我们应该给<code>UserTask</code>添加作为<code>source</code>节点的校验规则。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'userTask'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>RegisterParam<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> RectNode<span class="token punctuation">,</span> RectNodeModel <span class="token punctuation">}</span> <span class="token operator">=</span> RegisterParam<span class="token punctuation">;</span>
+  <span class="token keyword">class</span> <span class="token class-name">UserTaskView</span> <span class="token keyword">extends</span> <span class="token class-name">RectNode</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 自定义形状</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">class</span> <span class="token class-name">UserTaskModel</span> <span class="token keyword">extends</span> <span class="token class-name">RectNodeModel</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 设置校验规则</span>
+    <span class="token function">getConnectedSourceRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> rules <span class="token operator">=</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getConnectedSourceRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> gateWayOnlyAsTarget <span class="token operator">=</span> <span class="token punctuation">{</span>
+        message<span class="token operator">:</span> <span class="token string">'流程节点下一个节点只能是网关节点'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">validate</span><span class="token operator">:</span> <span class="token punctuation">(</span>source<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> isValid <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span><span class="token keyword">type</span> <span class="token operator">!==</span> <span class="token string">'gateway'</span><span class="token punctuation">)</span> isValid <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span> isValid<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      rules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>gateWayOnlyAsTarget<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> rules<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> UserTaskView<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> UserTaskModel<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><iframe width="100%" height="400" src="" data-v-e8c9530e></iframe></p> <p>当在面板上进行连线操作的时候，Logic Flow 会判断所有的规则是否通过，只有<strong>全部</strong>通过才能连接。</p> <p>访问 <a href="/api/modelApi.html#getconnectedsourcerules">API</a> 以查看<code>getConnectedSourceRules</code>方法的详细信息。</p> <h4 id="getconnectedtargetrules"><a href="#getconnectedtargetrules" class="header-anchor">#</a> getConnectedTargetRules</h4> <p>同样，我们可以通过重写<code>getConnectedTargetRules</code>方法，来实现当节点作为目标节点（target）时的校验规则。访问 <a href="/api/modelApi.html#getconnectedtargetrules">API</a> 以查看<code>getConnectedTargetRules</code>方法的详细信息。</p> <h4 id="接收错误消息"><a href="#接收错误消息" class="header-anchor">#</a> 接收错误消息</h4> <p>在连线时，当鼠标松开后如果没有通过自定义规则（<code>validate</code>方法返回值为<code>false</code>），Logic Flow 会对外抛出事件<code>connection:not-allowed</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code>lf<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'connection:not-allowed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="extendkey"><a href="#extendkey" class="header-anchor">#</a> extendKey</h2> <p>当我们注册的自定义节点希望可以被其他自定义节点继承时，就需要为<code>view</code>和<code>model</code>都设置一个静态属性<code>extendKey</code>，以便在<code>lf.register</code>的第二个回调函数的参数中被访问到。</p> <div class="language-ts extra-class"><pre class="language-ts"><code>lf<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'CustomNode'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> BaseNode<span class="token punctuation">,</span> BaseNodeModel <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">class</span> <span class="token class-name">View</span> <span class="token keyword">extends</span> <span class="token class-name">BaseNode</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> extendKey <span class="token operator">=</span> <span class="token string">'CustomNodeView'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">class</span> <span class="token class-name">Model</span> <span class="token keyword">extends</span> <span class="token class-name">BaseNodeModel</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> extendKey <span class="token operator">=</span> <span class="token string">'CustomNodeModel'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    view<span class="token operator">:</span> View<span class="token punctuation">,</span>
+    model<span class="token operator">:</span> Model<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/advance/event.html" class="prev">
+        事件 Event
+      </a></span> <span class="next"><a href="/guide/advance/customEdge.html">
+        自定义连线
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4e0df529.js" defer></script><script src="/assets/js/2.ce0f30c1.js" defer></script><script src="/assets/js/8.a1a17169.js" defer></script><script src="/assets/js/3.6f1b5052.js" defer></script>
+  </body>
+</html>
